@@ -23,8 +23,6 @@ def addNewAlert (alert_name, alert_details, alert_recipients, alert_date, recurr
 def removeAlert():
     alert_name = "Roux Birthday"
     cur.execute("DELETE FROM Alerts WHERE alert_name = ?", (alert_name,))
-    #delete_stmt = 'DELETE FROM Alerts WHERE alert_name = ?' <----- alternate way to perform delete!!
-    #cur.execute(delete_stmt, (alert_name,))
     con.commit()
 
     return
